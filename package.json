@@ -1,0 +1,23 @@
+{
+  "name": "devisexpress974",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "node src/index.js",
+    "start": "node src/index.js"
+  },
+  "dependencies": {
+    "better-sqlite3": "^9.4.0",
+    "body-parser": "^1.20.2",
+    "cookie-parser": "^1.4.6",
+    "dotenv": "^16.4.5",
+    "ejs": "^3.1.9",
+    "express": "^4.19.2",
+    "express-rate-limit": "^7.2.0",
+    "helmet": "^7.0.0",
+    "morgan": "^1.10.0",
+    "nodemailer": "^6.9.13",
+    "stripe": "^16.6.0"
+  }
+}
