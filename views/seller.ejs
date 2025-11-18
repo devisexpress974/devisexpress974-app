@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Devenir vendeur — DevisExpress974</title>
+  <link rel="stylesheet" href="/css/style.css"/>
+</head>
+<body>
+
+<header>
+  <h1>Devenir vendeur partenaire</h1>
+</header>
+
+<main>
+  <form method="post" action="/seller" class="card">
+
+    <label>Nom ou nom d'entreprise
+      <input name="name" required/>
+    </label>
+
+    <label>Email
+      <input name="email" type="email" required/>
+    </label>
+
+    <label>Téléphone
+      <input name="phone" required/>
+    </label>
+
+    <label>Catégories proposées  
+      <small>(séparez par des virgules : Plomberie, Électricité...)</small>
+      <input name="categories" required/>
+    </label>
+
+    <label>Zones d'intervention  
+      <small>(séparez par des virgules : Nord, Sud, St-Pierre...)</small>
+      <input name="zones" required/>
+    </label>
+
+    <button class="btn" type="submit">Créer mon compte vendeur</button>
+
+  </form>
+</main>
+
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Vos offres — DevisExpress974</title>
+  <link rel="stylesheet" href="/css/style.css"/>
+</head>
+<body>
+
+<header>
+  <h1>Vos offres reçues</h1>
+</header>
+
+<main class="card">
+
+  <p>
+    <b>Votre demande :</b><br>
+    Catégorie : <%= request.category %><br>
+    Zone : <%= request.zone %><br>
+    Budget maximum : <%= request.budget %> €<br>
+    Délai : <%= request.deadline %>
+  </p>
+
+  <% if (offers.length === 0) { %>
+
+    <p>Aucune offre pour le moment. Les vendeurs ont été notifiés. Revenez dans quelques minutes.</p>
+
+  <% } else { %>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Vendeur</th>
+        <th>Prix (€)</th>
+        <th>Délai</th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+      <% offers.forEach(o => { %>
+        <tr>
+          <td><%= o.seller_name %></td>
+          <td><%= o.price %></td>
+          <td><%= o.delay %></td>
+          <td>
+            <form method="post" action="/accept/<%= o.id %>">
+              <button class="btn" type="submit">Accepter (10 %)</button>
+            </form>
+          </td>
+        </tr>
+      <% }) %>
+    </tbody>
+  </table>
+
+  <% } %>
+
+</main>
+
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Répondre à la demande — DevisExpress974</title>
+  <link rel="stylesheet" href="/css/style.css"/>
+</head>
+<body>
+
+<header>
+  <h1>Répondre à la demande du client</h1>
+</header>
+
+<main class="card">
+
+  <p>
+    <b>Catégorie :</b> <%= request.category %><br>
+    <b>Zone :</b> <%= request.zone %><br>
+    <b>Budget max :</b> <%= request.budget %> €<br>
+    <b>Délai :</b> <%= request.deadline %>
+  </p>
+
+  <p><b>Client :</b> <%= request.name %> (<%= request.email %>)</p>
+
+  <form method="post" action="/offer">
+
+    <input type="hidden" name="request_id" value="<%= request.id %>"/>
+    <input type="hidden" name="seller_id" value="<%= seller.id %>"/>
+
+    <label>Votre prix proposé (€)
+      <input type="number" name="price" min="0" required/>
+    </label>
+
+    <label>Délai pour réaliser le service
+      <input name="delay" required/>
+    </label>
+
+    <button class="btn" type="submit">Envoyer l'offre</button>
+
+  </form>
+
+</main>
+
+</body>
+</html>

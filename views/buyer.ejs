@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Publier ma demande — DevisExpress974</title>
+  <link rel="stylesheet" href="/css/style.css"/>
+</head>
+<body>
+
+<header>
+  <h1>Publier ma demande</h1>
+</header>
+
+<main>
+  <form method="post" action="/buyer" class="card">
+
+    <label>Catégorie du service
+      <select name="category" required>
+        <option>Plomberie</option>
+        <option>Électricité</option>
+        <option>Jardinage</option>
+        <option>Peinture</option>
+        <option>Déménagement</option>
+        <option>Autre</option>
+      </select>
+    </label>
+
+    <label>Budget maximum (€)
+      <input type="number" name="budget" min="0" required/>
+    </label>
+
+    <label>Zone géographique
+      <select name="zone" required>
+        <option>Nord</option>
+        <option>Sud</option>
+        <option>Est</option>
+        <option>Ouest</option>
+        <option>Saint-Denis</option>
+        <option>Saint-Pierre</option>
+      </select>
+    </label>
+
+    <label>Délai souhaité
+      <select name="deadline">
+        <option>Urgent (24–48h)</option>
+        <option>1 semaine</option>
+        <option>Flexible</option>
+      </select>
+    </label>
+
+    <label>Votre nom
+      <input name="name" required/>
+    </label>
+
+    <label>Email de contact
+      <input name="email" type="email" required/>
+    </label>
+
+    <label>Téléphone
+      <input name="phone" required/>
+    </label>
+
+    <button class="btn" type="submit">Envoyer ma demande</button>
+  </form>
+</main>
+
+</body>
+</html>
